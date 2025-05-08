@@ -1,1 +1,5 @@
+apache-airflow[gcp]==2.9.0
+pandas
+google-cloud-storage
+google-cloud-bigquery
 
