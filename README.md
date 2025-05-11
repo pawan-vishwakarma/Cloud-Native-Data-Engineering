@@ -108,6 +108,3 @@ Each row in the dataset simulates a customer transaction:
 
 ---
 
-## 📄 License
-
-This project is open-source under the [MIT License](LICENSE).
