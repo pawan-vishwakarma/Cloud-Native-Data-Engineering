@@ -29,16 +29,29 @@ This project implements a fully automated ETL pipeline using **Apache Airflow**,
 ## 📁 Project Structure
 
 ```
-etl_airflow_project/
+cloud-native-etl-airflow/
+│
 ├── dags/
-│   └── etl_pipeline.py       # Main Airflow DAG
-├── data/
-│   └── sample_data.csv       # Sample CSV file (realistic 10k records)
-├── config.py                 # Loads environment variables
-├── .env                      # Stores secrets and config (not committed)
-├── .gitignore
-├── requirements.txt
-└── README.md
+│   └── etl_pipeline.py              # Main Airflow DAG
+│
+├── data_quality/
+│   ├── checks.py                    # Custom data quality check functions
+│   └── sql_checks.sql               # SQL templates for checks
+│
+├── config/
+│   └── settings.yaml                # Configurations (e.g., GCS paths, table names)
+│
+├── utils/
+│   └── helpers.py                   # Helper functions (e.g., logging, schema validation)
+│
+├── schemas/
+│   └── user_schema.json             # JSON schema for schema validation
+│
+├── requirements.txt                 # Python dependencies
+├── Dockerfile                       # For running Airflow in containers
+├── README.md                        # Project description and instructions
+└── .gitignore
+
 ```
 
 ---
